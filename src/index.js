@@ -24,8 +24,13 @@ console.log(addressBook.addContact(contact2));
 
     const duplicateContact = new Contact(
         "Muskan", "Gupta", "Bhopal", "India", "M.P.", "101", "9876543210", "muskan@gmail.com"
-    );
-    console.log(addressBook.addContact(duplicateContact)); 
+    );console.log(addressBook.addContact(duplicateContact));  
+
+    console.log("Contacts in India:");
+    console.log(addressBook.searchByCityOrState("India")); 
+
+    console.log("Viewing Persons by City or State:");
+    console.log(addressBook.viewPersonsByCityOrState());
 }  catch (error) {
 console.error("Error:", error.message);
 }
