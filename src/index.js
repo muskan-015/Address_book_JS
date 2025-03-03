@@ -24,7 +24,7 @@ console.log(addressBook.addContact(contact2));
 
     const duplicateContact = new Contact(
         "Muskan", "Gupta", "Bhopal", "India", "M.P.", "101", "9876543210", "muskan@gmail.com"
-    );console.log(addressBook.addContact(duplicateContact));  
+    ); console.log(addressBook.addContact(duplicateContact));  
 
     console.log("Contacts in India:");
     console.log(addressBook.searchByCityOrState("India")); 
@@ -33,7 +33,10 @@ console.log(addressBook.addContact(contact2));
     console.log(addressBook.viewPersonsByCityOrState());
 
     console.log("Count of Contacts by City and State:");
-    console.log(addressBook.countByCityOrState());
+    console.log(addressBook.countByCityOrState()); 
+
+    console.log("\nContacts Sorted Alphabetically:");
+    console.log(addressBook.sortContactsByName().map(contact => contact.toString()).join("\n"));
 }  catch (error) {
 console.error("Error:", error.message);
 }
