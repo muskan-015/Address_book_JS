@@ -14,14 +14,15 @@ try {
 const contact2 = new Contact(
     "Khushi", "Gupta", "Bhopal", "India", "M.P.", "100", "9876541110", "khushi@gmail.com"
 );
-    console.log(addressBook.addContact(contact2)); 
-    console.log("All Contacts Before editing", addressBook.getAllContacts());
-    console.log(addressBook.editContact("Rakesh", { address: "Pipariya", city: "New York", phone: "9234567890" }));
-    console.log("All Contacts After editing", addressBook.getAllContacts());
-    console.log(addressBook.deleteContact("Rakesh"));
-    console.log("All Contacts After Deleting:", addressBook.getAllContacts());
+console.log(addressBook.addContact(contact2)); 
+console.log("All Contacts Before editing", addressBook.getAllContacts());
+console.log(addressBook.editContact("Rakesh", { address: "Pipariya", city: "New York", phone: "9234567890" }));
+console.log("All Contacts After editing", addressBook.getAllContacts());
+console.log(addressBook.deleteContact("Rakesh"));
+console.log("All Contacts After Deleting:", addressBook.getAllContacts());
+console.log("Total Contacts:", addressBook.countContacts());
 } catch (error) {
-    console.error("Error:", error.message);
+console.error("Error:", error.message);
 }
 
 try {
