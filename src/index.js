@@ -24,7 +24,7 @@ console.log(addressBook.addContact(contact2));
 
     const duplicateContact = new Contact(
         "Muskan", "Gupta", "Bhopal", "India", "M.P.", "101", "9876543210", "muskan@gmail.com"
-    ); console.log(addressBook.addContact(duplicateContact));  
+    );  console.log(addressBook.addContact(duplicateContact));  
 
     console.log("Contacts in India:");
     console.log(addressBook.searchByCityOrState("India")); 
@@ -37,6 +37,18 @@ console.log(addressBook.addContact(contact2));
 
     console.log("\nContacts Sorted Alphabetically:");
     console.log(addressBook.sortContactsByName().map(contact => contact.toString()).join("\n"));
+
+    console.log("\nContacts Sorted by Name:");
+    console.log(addressBook.sortContactsByName().map(contact => contact.toString()).join("\n"));
+
+    console.log("\nContacts Sorted by City:");
+    console.log(addressBook.sortContactsByCity().map(contact => contact.toString()).join("\n"));
+
+    console.log("\nContacts Sorted by State:");
+    console.log(addressBook.sortContactsByState().map(contact => contact.toString()).join("\n"));
+
+    console.log("\nContacts Sorted by Zip:");
+    console.log(addressBook.sortContactsByZip().map(contact => contact.toString()).join("\n"));
 }  catch (error) {
 console.error("Error:", error.message);
 }
